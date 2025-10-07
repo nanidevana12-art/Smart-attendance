@@ -1,73 +1,99 @@
-# Welcome to your Lovable project
+Smart Attendance System using OTP + Face Scan
+🔍 Overview
 
-## Project info
+Smart Attendance System is an AI-powered attendance management solution that ensures accuracy and eliminates proxy attendance.
+It uses a two-step verification process — OTP authentication and Face Recognition — to securely verify each student’s identity before marking attendance.
 
-**URL**: https://lovable.dev/projects/c47eca13-3ae3-41fa-b6bb-1436b6acfa61
+🚀 Features
 
-## How can I edit this code?
+✅ Dual Authentication: Combines OTP verification with face recognition for higher security.
 
-There are several ways of editing your application.
+📸 Face Detection & Recognition: Uses deep learning models (OpenCV / FaceNet / dlib) to identify faces accurately.
 
-**Use Lovable**
+🔐 OTP Verification: Sends a one-time password to registered email or phone for authentication.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c47eca13-3ae3-41fa-b6bb-1436b6acfa61) and start prompting.
+💾 Automatic Attendance Logging: Marks attendance in the database automatically after verification.
 
-Changes made via Lovable will be committed automatically to this repo.
+📊 Dashboard: Admin panel to view attendance records, generate reports, and manage users.
 
-**Use your preferred IDE**
+⚡ Fast & Reliable: Minimal manual intervention with high accuracy.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🏗️ Tech Stack
+Component	Technology Used
+Frontend	HTML, CSS, JavaScript, Bootstrap / React
+Backend	Python (Flask / Django)
+Database	MySQL / SQLite
+AI & ML	OpenCV, NumPy, face_recognition / DeepFace
+OTP Service	Twilio / SMTP / Fast2SMS API
+Hosting	GitHub Pages (Frontend), Render / Heroku (Backend)
+⚙️ System Architecture
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+User Login → Enter Roll No / ID.
 
-Follow these steps:
+OTP Verification → User receives and enters OTP.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Face Scan → Camera captures and verifies the user’s face.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Attendance Marked → Data stored in the database with timestamp.
 
-# Step 3: Install the necessary dependencies.
-npm i
+🖥️ Installation & Setup
+# Clone the repository
+git clone https://github.com/<your-username>/smart-attendance-system.git
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+# Navigate to project directory
+cd smart-attendance-system
 
-**Edit a file directly in GitHub**
+# Install dependencies
+pip install -r requirements.txt
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# Run the application
+python app.py
 
-**Use GitHub Codespaces**
+📷 Screenshots
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+(Add screenshots of your login page, OTP page, and face scan window here)
 
-## What technologies are used for this project?
+📂 Folder Structure
+smart-attendance-system/
+│
+├── app.py                 # Main application file
+├── models/                # Face recognition and OTP logic
+├── static/                # CSS, JS, and images
+├── templates/             # HTML files
+├── database/              # Attendance data
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
 
-This project is built with:
+🔒 Security Measures
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+OTP expires within 1 minute
 
-## How can I deploy this project?
+Encrypted database storage
 
-Simply open [Lovable](https://lovable.dev/projects/c47eca13-3ae3-41fa-b6bb-1436b6acfa61) and click on Share -> Publish.
+Face data stored securely (hash or embedding vectors)
 
-## Can I connect a custom domain to my Lovable project?
+🧑‍💻 Future Enhancements
 
-Yes, you can!
+Integration with RFID for 3-layer authentication
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Real-time cloud syncing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Admin mobile app
+
+Integration with LMS (Learning Management Systems)
+
+🤝 Contributing
+
+Contributions are welcome!
+If you have ideas or improvements, feel free to fork this repo and open a pull request.
+
+📜 License
+
+This project is licensed under the MIT License – feel free to use and modify it.
+
+👨‍💻 Author
+
+Devana Sriram
+🎓 B.Tech CSE (AI & ML) | Parul University
+🌐 LinkedIn
+ | GitHub
